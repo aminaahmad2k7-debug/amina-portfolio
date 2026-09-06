@@ -1,5 +1,11 @@
-# Amina Ahmad — Portfolio
 
+# Amina Ahmad — AI Developer Portfolio
+
+Personal developer portfolio showcasing my projects, skills, achievements, and experience as a BS Artificial Intelligence student at NUST.
+
+## 🌐 Live Portfolio
+
+**[Visit my portfolio](https://amina-portfolio-delta.vercel.app)**
 A React + TypeScript + Vite portfolio site. No database, no required backend — the
 contact form opens the visitor's email client directly (`mailto:`), so this site is
 100% static and can be deployed to any static host.
