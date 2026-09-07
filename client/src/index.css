@@ -170,6 +170,11 @@ h1, h2, h3 { font-family: Handlee, "Bradley Hand ITC", "Segoe Print", "Comic San
   .recognition-card { min-height: 0; padding: 20px; }
   .recognition-card h3 { font-size: 2rem; }
   .recognition-card p { font-size: .8rem; }
+  /* At this width .recognition-grid drops to a single 1fr column, but the .featured card still
+     carried "grid-column: span 2" from the 900px breakpoint. Spanning 2 tracks on a 1-column grid
+     makes the browser create a phantom, content-sized implicit column, which is what was dragging
+     every card (not just featured) into a cut-off 2-up layout. Reset it back to a single column here. */
+  .recognition-card.featured { grid-column: span 1; }
   .contact-section { gap: 32px; }
   .contact-copy > p { font-size: .9rem; }
   .contact-links { gap: 8px 14px; }
