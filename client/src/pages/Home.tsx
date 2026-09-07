@@ -195,7 +195,7 @@ export default function Home() {
         <section className="hero section-wrap">
           <div className="hero-copy reveal">
             <p className="eyebrow"><span className="eyebrow-dot" /> Entry 01 · learning in public</p>
-            <h1 style={{ fontSize: "54px", width: "500px", maxWidth: "100%", borderColor: "#96509f", borderRadius: "10px", color: "#230b1c" }}>Building ideas into<br /><em>working things.</em></h1>
+            <h1 style={{ color: "#230b1c" }}>Building ideas into<br /><em>working things.</em></h1>
             <p className="hero-lede">I’m Amina Ahmad, a BS Artificial Intelligence student at NUST and an aspiring ML engineer interested in making technology practical and thoughtful.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={18} /></a>
