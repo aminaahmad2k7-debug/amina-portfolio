@@ -194,7 +194,8 @@ h1, h2, h3 { font-family: Handlee, "Bradley Hand ITC", "Segoe Print", "Comic San
 
 /* Overflow safety net: grid/flex children default to a content-based minimum width, which can force
    the whole row wider than the screen (this is what was cutting off the hero copy on phones). */
-.hero, .hero-copy, .hero-art, .about-layout, .about-copy, .portrait-card, .margin-note, .skills-layout, .skills-heading, .skill-groups, .project-list, .project-card, .project-details, .recognition-grid, .recognition-header, .contact-section, .contact-copy, .contact-form { min-width: 0; }
+.hero, .hero-copy, .hero-art, .about-layout, .about-copy, .portrait-card, .margin-note, .skills-layout, .skills-heading, .skill-groups, .project-list, .project-card, .project-details, .recognition-grid, .recognition-header, .recognition-card, .contact-section, .contact-copy, .contact-form { min-width: 0; }
+.recognition-card h3, .recognition-card p, .recognition-card small { overflow-wrap: break-word; }
 img { max-width: 100%; }
 
 .project-title-link { display:inline-flex; align-items:center; gap:7px; color:inherit; text-decoration:none; }
