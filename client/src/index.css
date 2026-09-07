@@ -178,10 +178,24 @@ h1, h2, h3 { font-family: Handlee, "Bradley Hand ITC", "Segoe Print", "Comic San
   .contact-form input, .contact-form textarea { font-size: .95rem; }
   .site-footer { padding-left: 18px; padding-right: 18px; font-size: .68rem; }
 }
-@media (hover: none) and (max-width: 640px) {
-  .project-tech-reveal { opacity: 1; transform: translateY(0); pointer-events: none; inset: 10px; padding: 14px; background: linear-gradient(180deg, rgba(85,27,69,.08), rgba(85,27,69,.9)); }
-  .dark .project-tech-reveal { background: linear-gradient(180deg, rgba(93,57,50,.08), rgba(228,170,212,.92)); }
+/* Touch devices have no real hover, so tapping was leaving cards/buttons stuck in their "hovered" look.
+   The tech list is already shown as static pills below each title, so the hover-only overlay is just switched off here instead of forced permanently on. */
+@media (hover: none) {
+  .project-tech-reveal { display: none !important; }
+  .project-card:hover, .project-card:focus-visible { transform: none !important; box-shadow: var(--shadow) !important; outline: none !important; }
+  .project-offset:hover { transform: translateY(38px) !important; }
+  .button-primary:hover, .back-to-top:hover, .back-to-top:focus-visible { transform: none !important; box-shadow: none !important; }
+  .learning-tags span:hover { transform: none !important; background: transparent !important; }
+  .main-nav a:hover::after, .main-nav .nav-link:hover::after { width: 0 !important; }
 }
+@media (hover: none) and (max-width: 900px) {
+  .project-card:hover { transform: none !important; }
+}
+
+/* Overflow safety net: grid/flex children default to a content-based minimum width, which can force
+   the whole row wider than the screen (this is what was cutting off the hero copy on phones). */
+.hero, .hero-copy, .hero-art, .about-layout, .about-copy, .portrait-card, .margin-note, .skills-layout, .skills-heading, .skill-groups, .project-list, .project-card, .project-details, .recognition-grid, .recognition-header, .contact-section, .contact-copy, .contact-form { min-width: 0; }
+img { max-width: 100%; }
 
 .project-title-link { display:inline-flex; align-items:center; gap:7px; color:inherit; text-decoration:none; }
 .project-title-link:hover { color:var(--wine); }
